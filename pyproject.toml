@@ -5,6 +5,17 @@ description = "A powerful debug mode"
 authors = ["GCBallesteros <dev+github@maxwellrules.com>"]
 license = "MIT"
 readme = "README.md"
+classifiers = [
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Debuggers",
+    "Topic :: Software Development :: Testing",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"
