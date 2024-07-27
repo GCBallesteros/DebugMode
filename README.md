@@ -1,0 +1,58 @@
+<h1 align="center">
+  Debug Mode
+</h1> 
+
+<h4 align="center">
+  <p>Superpowers when you need them the most</p>
+</h4>
+
+Debug mode is a tiny library that puts at your fingertips powerful tools to
+debug your code. 
+
+## What you get
+
+If `debug_mode` is activated (see below) you will have the following functions accessible
+from everywhere:
+
+- `ic` from the [icecream](https://github.com/gruns/icecream) library. A much
+better print statement for debugging purposes.
+- `iex` a function decorator from [ipdb](https://github.com/gotcha/ipdb) that
+will start a debugger session if the decorated function raises an exception.
+Great for those times when you don't know exactly where things are going wrong.
+
+On top of that, when you go start the debugger with `breakpoint()` or
+`set_trace()` you will drop into [ipdb](https://github.com/gotcha/ipdb), a much
+better pdb and you will have available [wat](https://github.com/igrek51/wat) to
+inspect all your variables in a much more powerful way.
+
+## Usage
+
+To use it simply import it and export the `DBG` environment variable.
+
+On your code you would normally have the following line sitting there and doing
+nothing. 
+
+```python
+import debug_mode
+```
+
+This has zero overhead and truly does nothing. However, 🐛__BUG ALERT__🐛, now
+you need all the help that you can get to sort things out. To activate
+`debug_mode` all you need to do is export `DBG`, it can hold any value, it just
+needs to be there. You could accomplish this in many ways. 
+
+On your current terminal you could do:
+```
+export DBG=1
+```
+
+and all subsequent runs of your code would activate debug mode. Otherwise you
+could use it only for the next invocation of your script:
+
+```
+DBG=1 python myscript.py
+```
+
+or if you want it always on you could export from your `bashrc`, `zshrc`...
+
+
