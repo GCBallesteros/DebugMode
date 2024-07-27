@@ -19,16 +19,17 @@ better print statement for debugging purposes.
 - `iex` a function decorator from [ipdb](https://github.com/gotcha/ipdb) that
 will start a debugger session if the decorated function raises an exception.
 Great for those times when you don't know exactly where things are going wrong.
-- `wat`
+- `wat` from [wat](https://github.com/igrek51/wat) to allow you to more deeply
+inspect all your variables.
 
 On top of that, when you go start the debugger with `breakpoint()` or
 `set_trace()` you will drop into [ipdb](https://github.com/gotcha/ipdb), a much
-better pdb and you will have available [wat](https://github.com/igrek51/wat) to
-inspect all your variables in a much more powerful way.
+better pdb with [wat](https://github.com/igrek51/wat) available there too.
 
 Lastly, `debug_mode` will create a folder in the current directory named
 `_debug` and will store it's path under the name `debug_folder` and make it
-globally accessible.
+globally accessible. This is great place to throw in plots, temporary files,
+etc.
 
 ## Usage
 
@@ -71,7 +72,7 @@ You can add the following Ruff configuration to your `pyproject.toml`
 
 ```toml
 [tool.ruff]
-builtins = ["ic", "iex"]
+builtins = ["ic", "iex", "wat"]
 ```
 
 If you already have a `[tool.ruff]` section on your pyproject just add the
