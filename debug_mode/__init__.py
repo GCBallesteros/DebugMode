@@ -11,7 +11,7 @@ if "DBG" in os.environ:
     # Make ipdb the default debugger
     os.environ["PYTHONBREAKPOINT"] = "ipdb.set_trace"
 
-    debug_folder = Path("./_debug")
+    debug_folder = Path("./_debug").resolve()
     debug_folder.mkdir(exist_ok=True)
 
     icecream.install()
