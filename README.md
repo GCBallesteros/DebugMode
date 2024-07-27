@@ -36,7 +36,7 @@ nothing.
 import debug_mode
 ```
 
-This has zero overhead and truly does nothing. However, 🐛__BUG ALERT__🐛, now
+This has zero overhead and truly does nothing. However, 🐛 __BUG ALERT__ 🐛, now
 you need all the help that you can get to sort things out. To activate
 `debug_mode` all you need to do is export `DBG`, it can hold any value, it just
 needs to be there. You could accomplish this in many ways. 
