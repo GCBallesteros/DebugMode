@@ -25,6 +25,10 @@ On top of that, when you go start the debugger with `breakpoint()` or
 better pdb and you will have available [wat](https://github.com/igrek51/wat) to
 inspect all your variables in a much more powerful way.
 
+Lastly, `debug_mode` will create a folder in the current directory named
+`_debug` and will store it's path under the name `debug_folder` and make it
+globally accessible.
+
 ## Usage
 
 To use it simply import it and export the `DBG` environment variable.
@@ -56,3 +60,32 @@ DBG=1 python myscript.py
 or if you want it always on you could export from your `bashrc`, `zshrc`...
 
 
+## Making Ruff happy
+
+I personally use Ruff for all my linting. Understandably he is not to happy
+about all those global objects that he knows nothing about and will shout out
+you, e.g for using "undefined" `ic`.
+
+You can add the following Ruff configuration to your `pyproject.toml`
+
+```toml
+[tool.ruff]
+builtins = ["ic", "iex"]
+```
+
+If you already have a `[tool.ruff]` section on your pyproject just add the
+builtins part.
+
+## Installation
+
+Debug mode will be available in pypi soon. In the meantime you may just copy
+the `debug_mode` folder into your project and add it's requirements to your
+project.
+
+```
+pip install icecream ipdb wat-inspector
+```
+
+## Credits
+
+Please leave a ⭐ if you find this useful in your projects.
