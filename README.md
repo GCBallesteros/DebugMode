@@ -19,6 +19,7 @@ better print statement for debugging purposes.
 - `iex` a function decorator from [ipdb](https://github.com/gotcha/ipdb) that
 will start a debugger session if the decorated function raises an exception.
 Great for those times when you don't know exactly where things are going wrong.
+- `wat`
 
 On top of that, when you go start the debugger with `breakpoint()` or
 `set_trace()` you will drop into [ipdb](https://github.com/gotcha/ipdb), a much
