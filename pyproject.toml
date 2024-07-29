@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "debug-mode"
-version = "0.1.0"
+version = "0.1.1"
 description = "A powerful debug mode"
 authors = ["GCBallesteros <dev+github@maxwellrules.com>"]
 license = "MIT"
