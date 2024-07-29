@@ -80,9 +80,14 @@ builtins part.
 
 ## Installation
 
-Debug mode will be available in pypi soon. In the meantime you may just copy
-the `debug_mode` folder into your project and add it's requirements to your
-project.
+Debug mode is available on pypi:
+
+```
+pip install debug-mode
+```
+
+but you may also just want to copy the `debug_mode` folder into your project
+and add it's requirements to your project.
 
 ```
 pip install icecream ipdb wat-inspector
