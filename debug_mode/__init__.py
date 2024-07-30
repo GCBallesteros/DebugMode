@@ -1,12 +1,20 @@
-from pathlib import Path
 import os
+from pathlib import Path
+from time import time
 
 if "DBG" in os.environ:
     import icecream
     import wat
     from ipdb import iex
 
-    icecream.ic.configureOutput(includeContext=True)
+    start_time = time()
+    
+    def delta_time():
+        delta = time() - start_time
+
+        return f"{delta:.2f}s | "
+
+    icecream.ic.configureOutput(includeContext=True, prefix=delta_time)
 
     # Make ipdb the default debugger
     os.environ["PYTHONBREAKPOINT"] = "ipdb.set_trace"
